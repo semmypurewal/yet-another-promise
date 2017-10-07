@@ -1,0 +1,26 @@
+{
+  "name": "yet-another-promise",
+  "version": "1.0.0",
+  "description": "A+ promise implentation, please don't use this for anything",
+  "main": "promise.js",
+  "dependencies": {},
+  "devDependencies": {
+    "promises-aplus-tests": "^2.1.2"
+  },
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semmypurewal/yet-another-promise.git"
+  },
+  "keywords": [
+    "promise"
+  ],
+  "author": "Semmy Purewal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/semmypurewal/yet-another-promise/issues"
+  },
+  "homepage": "https://github.com/semmypurewal/yet-another-promise#readme"
+}
