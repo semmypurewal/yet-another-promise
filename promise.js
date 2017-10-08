@@ -62,8 +62,8 @@ class MyPromise {
             }
         }
 
-        return new MyPromise(function (resolve, reject) {
-            setTimeout(function () {
+        return new MyPromise((resolve, reject) => {
+            setTimeout(() => {
                 try {
                     resolve(onFulfilledOrRejected(valueOrReason));
                 } catch (reason) {
@@ -105,13 +105,13 @@ class MyPromise {
                     if (typeof then === 'function') {
                         then.call(
                             valueOrReason,
-                            function (value) {
+                            (value) => {
                                 if (!resolveOrRejectCalled) {
                                     resolveOrRejectCalled = true;
                                     self.resolve(value);
                                 }
                             },
-                            function (reason) {
+                            (reason) => {
                                 if (!resolveOrRejectCalled) {
                                     resolveOrRejectCalled = true;
                                     self.reject(reason);
@@ -137,7 +137,7 @@ class MyPromise {
         } else /* STATES.REJECTED */ {
             self._reason = valueOrReason;
         }
-        setTimeout(function () {
+        setTimeout(() => {
             self._resolveAwaitingPromises();
         }, 0);
     }
@@ -145,7 +145,7 @@ class MyPromise {
     _resolveAwaitingPromises () {
         const self = this;
 
-        self._thens.forEach(function (then) {
+        self._thens.forEach((then) => {
             const promise = then.promise;
             let func;
             let valueOrReason;
