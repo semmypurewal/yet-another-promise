@@ -1,9 +1,9 @@
 'use strict';
 
 const STATES = {
-    PENDING   : "pending",
-    FULFILLED : "fulfilled",
-    REJECTED  : "rejected"
+    PENDING   : 'pending',
+    FULFILLED : 'fulfilled',
+    REJECTED  : 'rejected'
 };
 
 class MyPromise {
