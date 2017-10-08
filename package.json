@@ -1,7 +1,7 @@
 {
   "name": "yet-another-promise",
   "version": "1.0.0",
-  "description": "A+ promise implentation, please don't use this for anything",
+  "description": "A+ promise implementation, please don't use this for anything",
   "main": "promise.js",
   "dependencies": {},
   "devDependencies": {
